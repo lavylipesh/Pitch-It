@@ -16,4 +16,11 @@ Pitch-It is a python application that allows users to make pitches within 60 sec
 ```Flask```
 ```Heroku```
 # User Stories
->
+1. User should see pitches othe people have posted.
+2. User should vote on the pitch they liked.
+3. User should be signed in to leave a comment.
+4. User should receive a welcome email once they sign up.
+5. User should view the pitches they have created in their profile page.
+6. User should comment on the different pitches and leave feedback.
+7. User should submit a pitch in any category.
+8. User is able to view the different categories.
