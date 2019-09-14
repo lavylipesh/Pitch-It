@@ -12,8 +12,8 @@ Pitch-It is a python application that allows users to make pitches within 60 sec
 ```git clone https://github.com/lavylipesh/Pitch-It.git```
 ```cd Pitch-It```
 # Technologies used
->Python3.6
->Flask
->Heroku
+```Python3.6```
+```Flask```
+```Heroku```
 # User Stories
-
+>
