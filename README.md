@@ -4,3 +4,10 @@ This is a Python Application that allows users to write pitches within 1 minute 
 Lilibeth Langat
 # Description
 Pitch-It is a python application that allows users to make pitches within 60 seconds.The pitches they make can either make them or break them.
+# Installation
+```python3.6```
+```flask```
+```requirements.txt```
+# Setup Instructions
+```git clone https://github.com/lavylipesh/Pitch-It.git```
+```cd Pitch-It```
