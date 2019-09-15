@@ -1,0 +1,14 @@
+#index{
+    background-image: url('https://cdn.pixabay.com/photo/2017/06/03/12/35/sun-2368570_960_720.jpg')
+}
+#pich{
+    text-shadow:4px 4px rgb(233, 168, 168);
+    color:rgb(15, 15, 15);
+    font-size: 100px;
+
+}
+#ops{
+    background-color: transparent;
+    color:rgb(9, 9, 10);
+    background-color:rgb(230, 176, 166); 
+}

@@ -1,5 +1,74 @@
 {% extends 'base.html' %}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 {% block content %}
 {{super}}
+<div id="index">
+<h1 id="pich">WELCOME TO PITCH IT :)</h1>
+<div class="row" >
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div><br>
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        
+      </div>
+    </div>
+  </div>
+</div><br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div><br>
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        
+      </div>
+    </div>
+  </div>
+</div><br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div><br>
+  <div class="col-sm-6">
+    <div class="card" id="ops">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Special title treatment</strong></h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 
 {% endblock %}
