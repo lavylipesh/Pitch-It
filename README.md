@@ -27,4 +27,6 @@ Pitch-It is a python application that allows users to make pitches within 60 sec
 8. User is able to view the different categories.
 
 # Contact information
-If you want more information on my projects feel free to contact me at 
+If you want more information on my projects feel free to contact me at beth13lilib@gmail.com
+# Licence Information
+MIT Licence (c) Lilibeth Langat
