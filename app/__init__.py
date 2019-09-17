@@ -1,16 +1,12 @@
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import Login_Manager
+
 
 
 app = Flask(__name__)
 
 db = SQLAlchemy(app)
-
-login_manager = LoginManager()
-login_manager.session_protection = 'strong'
-login_manager.login_view = 'auth.login'
 
 
 
