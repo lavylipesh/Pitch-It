@@ -3,18 +3,21 @@ from config import Config
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
-from flask_uploads import IMAGES, UploadSet,configure_uploads
+from flask_uploads import UploadSet,configure_uploads,IMAGES
+
 
 db = SQLAlchemy()
 bootstap = Bootstrap()
+
+
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
-login_manager.load_view = 'auth.login'
+login_manager.login_view = 'auth.login'
+
 photos = UploadSet('photos',IMAGES)
 
 
-
-def create_app():
+def create_app(cofig_name):
     app = Flask(__name__)
     app.config.from_object(Config)
     from .auth import auth as authentication_blueprint
@@ -23,11 +26,9 @@ def create_app():
     app.register_blueprint(authentication_blueprint)
     app.register_blueprint(main_blueprint)
 
-    login_manager.init_app(app)
-    db.init_app(app)
     bootstap.init_app(app)
+    db.init_app(app)
+    login_manager.init_app(app)
     configure_uploads(app,photos)
-    
-
-
+   
     return app
