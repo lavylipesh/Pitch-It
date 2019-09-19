@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    DEBUG = True
+    
     SQLALCHEMY_DATABASE_URI = 'postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitch'
     SECRET_KEY = '2wnd56mdj6hcmnc7cxn'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
@@ -16,3 +16,9 @@ class Config:
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+class DevConfig(Config):
+    DEBUG = True
+config_options = {
+    'development' = DevConfig
+    'productions' = ProdConfig
+}
