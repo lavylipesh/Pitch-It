@@ -2,11 +2,11 @@ import os
 
 class Config:
     
-    # SQLALCHEMY_DATABASE_URI='postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitch'
+    # SQLALCHEMY_DATABASE_URI='postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitches'
     SECRET_KEY='2wnd56mdj6hcmnc7cxn'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-    
+
 
    
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -16,6 +16,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")    
 
 class ProdConfig(Config):
+    
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     
 class DevConfig(Config):
