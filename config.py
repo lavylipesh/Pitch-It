@@ -2,8 +2,8 @@ import os
 
 class Config:
     
-    SQLALCHEMY_DATABASE_URI = 'postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitch'
-    SECRET_KEY = '2wnd56mdj6hcmnc7cxn'
+    SQLALCHEMY_DATABASE_URI='postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitch'
+    SECRET_KEY='2wnd56mdj6hcmnc7cxn'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
@@ -19,6 +19,6 @@ class ProdConfig(Config):
 class DevConfig(Config):
     DEBUG = True
 config_options = {
-    'development' : DevConfig
-    'production' : ProdConfig
+'development':DevConfig
+'production':ProdConfig
 }
