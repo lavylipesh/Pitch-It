@@ -1,3 +1,5 @@
+import os
+
 class Config:
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'postgres+psycopg2://lilibeth:1234@127.0.0.1:5432/pitch'

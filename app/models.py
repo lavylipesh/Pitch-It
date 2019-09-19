@@ -2,6 +2,7 @@ from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
+from datetime import datetime
 
 
 
@@ -14,7 +15,8 @@ class User(UserMixin,db.Model):
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
-
+   
+    
     @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
@@ -33,6 +35,19 @@ class User(UserMixin,db.Model):
     def __repr__(self):
         return f'User{self.username}'
 
+class Comments(db.Model):
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer,primary_key=True)
+    comments = db.Column(db.String(255))
+    pitch = db.relationship('Pitch',backref = 'comments',lazy = 'dynamic')
 
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
 
+    @classmethod
+    def get_comment(cls):
+        comments = Comments.query.all()
+
+        return comments
 
