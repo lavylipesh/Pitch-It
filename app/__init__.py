@@ -21,9 +21,9 @@ login_manager.login_view = 'auth.login'
 photos = UploadSet('photos',IMAGES)
 
 
-def create_app():
+def create_app(config_name):
     app = Flask(__name__)
-    app.config.from_object(Config)
+    app.config.from_object(config_options[config_name])
     from .auth import auth as authentication_blueprint
     from .main import main as main_blueprint
 
