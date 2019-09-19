@@ -2,11 +2,17 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content %}
-<link rel="stylesheet" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmF4U_PcxU1pijwvGnWFXAHQeUlKgmfiIYUzTLNPOlCetJnHUW">
+
 <div class="container"> 
     <div class="row">
       <div class= "col-md-2"> </div>
       <div class="col-md-8">
+          <style>
+                    body{
+                      background-image: url('../static/photos/dawn-3358468_960_720.jpg')
+                      
+                    }
+              </style>
       <!--Flash message -->
       {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">
@@ -20,6 +26,5 @@
      </div>
      <div clas="col-md-2"> </div>
     </div>
-</div>
 </div>
 {%  endblock %}
